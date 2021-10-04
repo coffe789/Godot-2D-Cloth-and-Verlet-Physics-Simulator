@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D"]
+rotation = -1.57353
+length = 10.0
+rest_length = 10.0
+stiffness = 26.6
