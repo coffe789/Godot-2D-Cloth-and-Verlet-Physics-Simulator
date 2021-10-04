@@ -1,12 +1,12 @@
 extends Node2D
-
+onready var area = get_node("Area2D")
 var velocity = Vector2(0,0)
 var acceleration = Vector2(0,100) #gravity
 var entered_body = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass#area.set_monitorable(false)
 
 
 onready var last_position = position
@@ -37,6 +37,7 @@ func get_trig_c(a):
 
 func _on_Area2D_body_entered(body):
 	entered_body=true;
+	print("in")
 	
 
 

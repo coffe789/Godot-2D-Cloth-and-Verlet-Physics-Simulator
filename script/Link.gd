@@ -1,12 +1,13 @@
 extends Node2D
 
+
 var resting_distance = 10
 var PM_a #Point Mass
 var PM_b
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 # Distance between coordinate vectors
 func find_distance(a,b):
