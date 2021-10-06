@@ -4,7 +4,7 @@ onready var Link = preload("res://scene/Link.tscn")
 var PM_list = []
 var link_list = [] # Not a linked list lol
 var spawn_offset = Vector2(600,100)
-var PM_spacing = 20
+var PM_spacing = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +14,7 @@ func _ready():
 
 
 func spawn_PM():
-	for i in 10:
+	for i in 5:
 		var new_PM = PM.instance()
 		new_PM.name = "PointMass" + str(i)
 		new_PM.position = spawn_offset + Vector2((i*PM_spacing),rand_range(-10,10))
@@ -31,15 +31,16 @@ func link_PM():
 		add_child(new_link)
 
 func _physics_process(delta):
+	suck_to_mouse(delta)
 	for i in link_list.size():
 		link_list[i].constrain()
 		link_list[i].constrain()
 		link_list[i].constrain()
 	for i in PM_list.size():
 		PM_list[i].do_verlet(delta)
-	suck_to_mouse(delta)
 	
 
 func suck_to_mouse(delta):
 	var mousepos = get_viewport().get_mouse_position()
 	PM_list[0].position = PM_list[0].position.linear_interpolate(mousepos, delta * 40)
+

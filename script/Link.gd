@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var resting_distance = 10
+var resting_distance = 30
 var PM_a #Point Mass
 var PM_b
 
@@ -26,6 +26,8 @@ func constrain():
 	PM_a.position += translate_by
 	PM_b.position -= translate_by
 
+func _draw():
+	draw_line(PM_a.position, PM_b.position, Color(1.0, 1.0, 1.0) , 2, false)
 
 func _physics_process(delta):
-	pass
+	update()
