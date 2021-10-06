@@ -1,7 +1,7 @@
 extends Node2D
 onready var area = get_node("Area2D")
 var velocity = Vector2(0,0)
-var acceleration = Vector2(0,15) #gravity
+var acceleration = Vector2(9,15) #gravity
 var entered_body = false;
 
 # Called when the node enters the scene tree for the first time.
@@ -26,7 +26,7 @@ func do_verlet(delta):
 	#	mult = 0
 	if (entered_body && velocity.y > 0):
 		position = last_position
-		velocity *= 1
+		velocity *= -1
 
 	position = position + (velocity*delta*60) + (acceleration*delta * mult)
 
