@@ -14,10 +14,15 @@ config/name="Verlet Physics"
 run/main_scene="res://scene/Area2.tscn"
 config/icon="res://icon.png"
 
+[global]
+
+backg=false
+
 [physics]
 
 common/enable_pause_aware_picking=true
 
 [rendering]
 
+environment/default_clear_color=Color( 0.180392, 0.176471, 0.411765, 1 )
 environment/default_environment="res://default_env.tres"

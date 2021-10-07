@@ -1,46 +1,26 @@
 extends Node2D
 onready var area = get_node("Area2D")
 var velocity = Vector2(0,0)
-var acceleration = Vector2(0,15) #gravity
+var acceleration = Vector2(0,15) #gravity or other external forces
 var entered_body = false;
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass#area.set_monitorable(false)
-
+var is_pin = false #Link checks if this is true
 
 onready var last_position = position
 var next_position
-var current_time = 0
-func _process(delta):
-	pass#do_verlet(delta)
-
-
 
 func do_verlet(delta):
 	var mult = 1
 	velocity = position - last_position
 	last_position = position
-	#if (entered_body && velocity.x > 0):
-	#	velocity.x *= -1
-	#	mult = 0
-	if (entered_body):
+	if (entered_body): #collision
 		mult = 0
 		position = last_position
 		velocity *= -0.7
-	velocity *= 0.98
+	velocity *= 0.98 # damping
 	position = position + (velocity*delta*60) + (acceleration*delta * mult)
 
-
-func get_trig_c(a):
-	return sqrt(pow(a.x,2)+pow(a.y,2))
-
-
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	entered_body=true;
-	print("in")
-	
 
-
-func _on_Area2D_body_exited(body):
+func _on_Area2D_body_exited(_body):
 	entered_body = false
