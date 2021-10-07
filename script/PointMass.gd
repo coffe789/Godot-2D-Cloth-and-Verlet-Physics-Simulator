@@ -3,7 +3,9 @@ onready var area = get_node("Area2D")
 var velocity = Vector2(0,0)
 var acceleration = Vector2(0,15) #gravity or other external forces
 var entered_body = false;
-var is_pin = false #Link checks if this is true
+var is_pin = false
+var collision_factor = 0.7 #Read docs for what this does
+var dampen_factor = 0.98
 
 onready var last_position = position
 var next_position
@@ -15,8 +17,8 @@ func do_verlet(delta):
 	if (entered_body): #collision
 		mult = 0
 		position = last_position
-		velocity *= -0.7
-	velocity *= 0.98 # damping
+		velocity *= -collision_factor
+	velocity *= dampen_factor # damping
 	position = position + (velocity*delta*60) + (acceleration*delta * mult)
 
 func _on_Area2D_body_entered(_body):

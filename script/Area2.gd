@@ -4,7 +4,7 @@ onready var Link = preload("res://scene/Link.tscn")
 var PM_list = []
 var link_list = [] # Not a linked list lol
 var spawn_offset = Vector2(600,100)
-var PM_spacing = 30 # Length of links between nodes
+var PM_spacing = 20 # Length of links between nodes
 var grid_size = 7
 
 func _ready():
