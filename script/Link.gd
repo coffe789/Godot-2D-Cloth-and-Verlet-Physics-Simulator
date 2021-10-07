@@ -16,11 +16,11 @@ func find_distance(a,b):
 func constrain():
 	var distance = find_distance(PM_a.position,PM_b.position)
 	var distance_ratio
-	if distance !=0:	#prevent division by zero
+	if distance !=0:	#prevent division by zero, which is basically impossible but hey
 		distance_ratio = (resting_distance - distance) / distance
 	else:
 		distance_ratio = 1000
-	if distance_ratio <= 0:
+	if distance_ratio <= 0: #Only constrain when they are too far apart, not when too close
 		# Move points toward each other, proportionally to how far away they are
 		var translate_by = (PM_a.position - PM_b.position) * 0.5 * distance_ratio
 		PM_a.position += translate_by

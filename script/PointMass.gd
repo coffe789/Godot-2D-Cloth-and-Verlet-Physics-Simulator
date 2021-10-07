@@ -24,10 +24,10 @@ func do_verlet(delta):
 	#if (entered_body && velocity.x > 0):
 	#	velocity.x *= -1
 	#	mult = 0
-	if (entered_body && velocity.y > 0):
-		mult = 0.1
+	if (entered_body):
+		mult = 0
 		position = last_position
-		velocity *= -0.2
+		velocity *= -0.7
 	velocity *= 0.98
 	position = position + (velocity*delta*60) + (acceleration*delta * mult)
 
