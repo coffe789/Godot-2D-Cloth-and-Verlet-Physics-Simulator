@@ -1,12 +1,15 @@
 # Godot-2D-Cloth-and-Verlet-Physics-Simulator
 ![Preview](https://cdn.discordapp.com/attachments/477074702662369280/895659299341217822/2021-10-07_19-57-20.gif)
+
 This is a customisable 2D cloth, simulated using verlet integration physics that can be added to a game in the Godot engine.
 I have also added support for creating other objects that obey verlet physics.
 
 Usage:
 Download the project and import the scenes and scripts appropriately. Delete the static bodies in Area, as they are just there for demonstration.
-Place area in the root of your scene. Read the documentation and at how I spawn the cloth in spawn_PM() & link_PM() to figure out how to use it for your purposes.
+Place Area in the root of your scene. Read the documentation and at how I spawn the cloth in spawn_PM() & link_PM() to figure out how to use it for your purposes.
 
+The cloth was created to be my player's cape, but I imagine you could use it for many things such as curtains or power lines. 
+If you got wild with it you could create different rigid shapes such as enemies or machines.
 
   Supported Customisability In Area:
 	
@@ -48,5 +51,6 @@ Place area in the root of your scene. Read the documentation and at how I spawn 
     Feel free to make suggestions, or add your own features to this repo. The code should be fairly easy to understand I think.
 
 Thanks to these resources for helping me:
+
 https://gamedevelopment.tutsplus.com/tutorials/simulate-tearable-cloth-and-ragdolls-with-simple-verlet-integration--gamedev-519
 https://www.youtube.com/watch?v=3HjO_RGIjCU
