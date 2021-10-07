@@ -43,7 +43,7 @@ If you got wild with it you could create different rigid shapes such as enemies 
 	
     - You can improve performance by quite a bit by making the constrain() function run less times per frame. By default it runs 3 times per frame. In short, running it several times stops the cloth from 'shivering.' The shivering isn't super noticeable so it wouldn't hurt to reduce this.
 	
-    - You could also just lower the rate at which Area updates its physics, which in theory would make it twice as performant.
+    - You could also just like half the rate at which Area updates its physics, which in theory would make it twice as performant.
     
   TODO & Contributions:
 	
