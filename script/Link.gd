@@ -20,11 +20,11 @@ func constrain():
 		distance_ratio = (resting_distance - distance) / distance
 	else:
 		distance_ratio = 1000
-	
-	# Move points toward each other, proportionally to how far away they are
-	var translate_by = (PM_a.position - PM_b.position) * 0.5 * distance_ratio
-	PM_a.position += translate_by
-	PM_b.position -= translate_by
+	if distance_ratio <= 0:
+		# Move points toward each other, proportionally to how far away they are
+		var translate_by = (PM_a.position - PM_b.position) * 0.5 * distance_ratio
+		PM_a.position += translate_by
+		PM_b.position -= translate_by
 
 func _draw():
 	draw_line(PM_a.position, PM_b.position, Color(1.0, 1.0, 1.0) , 2, false)
