@@ -21,7 +21,6 @@ func _ready():
 		is_PM_b_pin = true
 	else:
 		is_PM_b_pin = PM_b.is_pin
-	print(is_PM_a_pin)
 
 # Distance between coordinate vectors
 func find_distance(a,b):
