@@ -7,6 +7,18 @@ var is_pin = false
 var collision_factor = 0.7 #Read docs for what this does
 var dampen_factor = 0.98
 
+var drawto = [self]
+var drawto_size
+
+func _draw():
+	var pva = PoolVector2Array()
+	for i in drawto.size():
+		pva.append(drawto[i].get_position()-self.get_position())
+	draw_colored_polygon(pva, Color(1,1,1))
+
+func _physics_process(delta):
+	pass
+
 onready var last_position = position
 var next_position
 
