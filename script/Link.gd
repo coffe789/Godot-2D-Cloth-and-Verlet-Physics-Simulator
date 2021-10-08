@@ -7,7 +7,7 @@ var PM_b
 var is_PM_a_pin #A pinned node's position is not affected by the constraint
 var is_PM_b_pin
 var is_rigid = false #A rigid link has a minimum length
-var color = 0#Color(1.0, 1.0, 1.0)
+var color = Color(1.0, 2.0, 1.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

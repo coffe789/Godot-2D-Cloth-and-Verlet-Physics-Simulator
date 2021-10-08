@@ -11,13 +11,14 @@ var drawto = [self]
 var drawto_size
 
 func _draw():
-	var pva = PoolVector2Array()
-	for i in drawto.size():
-		pva.append(drawto[i].get_position()-self.get_position())
-	draw_colored_polygon(pva, Color(1,1,1))
+	if drawto.size() == 4:
+		var pva = PoolVector2Array()
+		for i in drawto.size():
+			pva.append(drawto[i].get_position()-self.get_position())
+		draw_primitive(pva, PoolColorArray(),PoolVector2Array())
 
 func _physics_process(delta):
-	pass
+	update()
 
 onready var last_position = position
 var next_position
