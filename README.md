@@ -43,11 +43,11 @@ If you got wild with it you could create different rigid shapes such as enemies 
 	
     - You can improve performance by quite a bit by making the constrain() function run less times per frame. By default it runs 3 times per frame. In short, running it several times stops the cloth from 'shivering.' The shivering isn't super noticeable so it wouldn't hurt to reduce this.
 	
-    - You could also just like half the rate at which Area updates its physics, which in theory would make it twice as performant.
+    - You could also maybe just half the rate at which Area updates its physics, which in theory would make it twice as performant.
     
   TODO & Contributions:
 	
-    I will likely add support for texturing the cloth, and I may add support for adjusting the rigidity of the links.
+    I may add support for adjusting the rigidity of the links and giving the cloth an outline.
     Feel free to make suggestions, or add your own features to this repo. The code should be fairly easy to understand I think.
 
 Thanks to these resources for helping me:
