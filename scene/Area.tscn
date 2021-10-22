@@ -12,6 +12,7 @@ script = ExtResource( 2 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 1005.75, 501.539 )
 rotation = -1.5708
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 466.274, 0 )
@@ -25,6 +26,7 @@ offset = Vector2( -11.8289, 5.46155 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2( -6.68445, 583.947 )
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 466.274, 0 )
