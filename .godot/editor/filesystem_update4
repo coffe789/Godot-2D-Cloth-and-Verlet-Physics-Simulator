@@ -1,0 +1,6 @@
+res://default_env.tres
+res://scene/Area.tscn
+res://script/PointMass.gd
+res://script/Link.gd
+res://scene/Link.tscn
+res://script/Area.gd

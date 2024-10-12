@@ -1,39 +1,39 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://bac8nv128uwe"]
 
-[ext_resource path="res://sprite/tile.png" type="Texture" id=1]
-[ext_resource path="res://script/Area.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://bja1drxykd8lg" path="res://sprite/tile.png" id="1"]
+[ext_resource type="Script" path="res://script/Area.gd" id="2"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 567.882, 26.7229 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(1135.76, 53.4458)
 
-[node name="Area" type="Node2D"]
-script = ExtResource( 2 )
+[node name="Area3D" type="Node2D"]
+script = ExtResource("2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 1005.75, 501.539 )
-rotation = -1.5708
 z_index = 1
+position = Vector2(1005.75, 501.539)
+rotation = -1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 466.274, 0 )
-shape = SubResource( 1 )
+position = Vector2(466.274, 0)
+shape = SubResource("1")
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 517.575, -4.27734 )
-scale = Vector2( 4.50142, 0.197385 )
-texture = ExtResource( 1 )
-offset = Vector2( -11.8289, 5.46155 )
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(517.575, -4.27734)
+scale = Vector2(4.50142, 0.197385)
+texture = ExtResource("1")
+offset = Vector2(-11.8289, 5.46155)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2( -6.68445, 583.947 )
 z_index = 1
+position = Vector2(-6.68445, 583.947)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( 466.274, 0 )
-shape = SubResource( 1 )
+position = Vector2(466.274, 0)
+shape = SubResource("1")
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 517.575, -6.27881 )
-scale = Vector2( 4.50142, 0.197385 )
-texture = ExtResource( 1 )
-offset = Vector2( -11.8289, 5.46155 )
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(517.575, -6.27881)
+scale = Vector2(4.50142, 0.197385)
+texture = ExtResource("1")
+offset = Vector2(-11.8289, 5.46155)
